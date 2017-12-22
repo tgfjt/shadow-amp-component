@@ -1,0 +1,47 @@
+{
+  "name": "shadow-amp-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:deps": "dependency-check .",
+    "test:lint": "standard *.js --fix",
+    "test": "run-s test:*",
+    "budo": "cd example && budo ---live -cors --ssl simple.js:bundle.js",
+    "build": "browserify example/simple.js -o example/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgfjt/shadow-amp-component.git"
+  },
+  "keywords": [
+    "bel",
+    "choo",
+    "nanocomponent",
+    "amphtml",
+    "amp"
+  ],
+  "author": "tgfjt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tgfjt/shadow-amp-component/issues"
+  },
+  "homepage": "https://github.com/tgfjt/shadow-amp-component#readme",
+  "dependencies": {
+    "bel": "^5.1.5",
+    "nanocomponent": "^6.5.0"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "budo": "^10.0.4",
+    "dependency-check": "^2.9.2",
+    "npm-run-all": "^4.1.2",
+    "standard": "^10.0.3",
+    "yo-yoify": "^4.2.0"
+  },
+  "browserify": {
+    "transform": [
+      "yo-yoify"
+    ]
+  }
+}
